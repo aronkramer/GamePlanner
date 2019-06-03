@@ -25,6 +25,7 @@ namespace TheHockeyGame.Controllers
             return View(vm);
         }
 
+        
         public ActionResult Admin()
         {
             return View();
