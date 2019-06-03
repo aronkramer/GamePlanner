@@ -1,0 +1,26 @@
+﻿@using TheHockeyGame.Models
+@model SignInViewModel
+
+@if(Model.Gamer == null)
+{
+    <h1>There are no games scheduled at this time</h1>
+}
+else if (Model.PeopleCount < Model.Gamer.Pplamount)
+{
+    <form method="post" action="/Manager/JoinGame">
+        <div class="col-md-10 col-md-offset-1 well">
+            <input class="form-control" placeholder="First Name" name="firstname" />
+            <br />
+            <input class="form-control" placeholder="Last Name" name="lastname" />
+            <br />
+            <input class="form-control" placeholder="Email" name="email" />
+            <br />
+            <input type="hidden" name="gameid" />
+            <button class="form-control btn btn-warning">Submit</button>
+        </div>
+    </form>
+}
+else
+{
+<h1>game is full</h1>
+}

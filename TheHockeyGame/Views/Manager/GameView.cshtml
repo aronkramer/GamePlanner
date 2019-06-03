@@ -1,0 +1,18 @@
+﻿@using TheHockeyGame.Data
+@model IEnumerable<Players>
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>first</th>
+        <th>last</th>
+        <th>email</th>
+    </tr>
+@foreach(Players p in Model)
+{
+    <tr>
+        <td>@p.FirstName</td>
+        <td>@p.LastName</td>
+        <td>@p.Email</td>
+    </tr>
+}
+</table>

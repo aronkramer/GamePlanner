@@ -1,0 +1,11 @@
+﻿<form method="post" action="/home/addGame">
+    <h1>create new Game</h1>
+    <select class="form-control" name="Pplamount">
+        @for (int i = 10; i <= 35; i++)
+        {
+            <option>@i</option>
+        }
+    </select>
+    <input type="date" class="form-control" name="GameTime"/>
+    <button>Save New Game</button>
+</form>

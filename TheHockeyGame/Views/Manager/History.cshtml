@@ -1,0 +1,21 @@
+﻿@using TheHockeyGame.Data
+@model IEnumerable<Gamer>
+
+<div class="col-md-8 col-md-offset-2">
+    <center><h1>Sign Up History</h1></center>
+    <table class="table table-bordered">
+        <tr>
+            <th>Date</th>
+            <th>Sign Up</th>
+            <th>Details</th>
+        </tr>
+        @foreach(Gamer g in Model)
+        {
+            <tr>
+                <td>@g.GameTime.ToLongDateString()</td>
+                <td>@g.pplcount \ @g.Pplamount</td>
+                <td><a href="/manager/gameview?id=@g.Id" class="btn btn-success">View</a></td>
+            </tr>
+        }
+    </table>
+</div>
